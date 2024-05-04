@@ -291,6 +291,8 @@ body {
 
  #radio3:checked ~.first{
     margin-left: -50%;
+ } #radio4:checked ~.first{
+    margin-left: -75%;
  } 
 
  .navigation-auto div{
@@ -323,6 +325,10 @@ body {
  #radio3:checked ~ .navigation-auto .auto-btn3{
     background-color: #000;
  }
+ #radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #000;
+ }
+
 
  #img_anuncio {
     position: relative;

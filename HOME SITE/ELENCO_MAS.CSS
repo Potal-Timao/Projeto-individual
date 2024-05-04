@@ -115,6 +115,7 @@ body {
     font-size: 1.2vw; 
     color: #ff0000; 
 }
+
 #li_futebol {
     position: absolute;
     margin-top: 5px;
@@ -251,6 +252,7 @@ body {
 
 .img_elencoF img {
     width: 100%;
+    
 }
 
 .faixa_cinza{
@@ -267,38 +269,37 @@ body {
     font-size: 1.5em; 
     font-weight: bold;
 }
-#p_feminino{
+#p_masculino{
     color: #ffffff;
     font-family: "Raleway";
-    margin-top: 10px;
-    margin-left: 750px;
+    margin-top: -18px;
+    margin-left: 650px;
     font-size: 1em; 
     font-weight: bold;
     cursor: pointer;
     transition: all 0.7s ease;
 }
-#p_feminino:hover {
-    font-size: 1.1em; 
-    color: #ff0000; 
-}
-
-#p_masculino {
-    color: #ffffff;
-    font-family: "Raleway";
-    margin-top: -19px;
-    margin-left: 650px;
-    font-size: 1em; 
-    cursor: pointer;
-    font-weight: lighter;
-    transition: all 0.7s ease; 
-    text-decoration: none;
-}
-
 #p_masculino:hover {
     font-size: 1.1em; 
     color: #ff0000; 
 }
-#p_masculino a {
+
+#p_feminino {
+    color: #ffffff;
+    font-family: "Raleway";
+    margin-top: 9px;
+    margin-left: 750px;
+    font-size: 1em; 
+    cursor: pointer;
+    font-weight: lighter;
+    transition: all 0.7s ease; 
+}
+
+#p_feminino:hover {
+    font-size: 1.1em; 
+    color: #ff0000; 
+}
+#p_feminino a {
     text-decoration: none; 
     color: inherit; 
 }
@@ -408,61 +409,6 @@ body {
     margin-top: -5%;
     margin-left: 5px;
 }
-.box4{
-    border-top-right-radius: 25%;
-    margin-left: 940px;
-    margin-top: -230px;
-    width: 12%;
-    height: 230px;
-    background-image: linear-gradient(to top, #000000ac, #373333, #9f9f9fc6);
-}
-#goleira4 img{
-    margin-left: 25px;
-    margin-top: 40px;
-    width: 70%;
-    height: 70%;    
-    transition: transform 0.3s ease;
-}
-
-#goleira4 img:hover {
-    transform: scale(1.1); 
-}
-#goleira4 p{
-    color: #ffffff;
-    font-family: "Raleway";
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: -5%;
-    margin-left: 5px;
-}
-.box5{
-    border-top-right-radius: 25%;
-    margin-left: 1200px;
-    margin-top: -230px;
-    width: 12%;
-    height: 230px;
-    background-image: linear-gradient(to top, #000000ac, #373333, #9f9f9fc6);
-}
-#goleira5 img{
-    margin-left: 25px;
-    margin-top: 40px;
-    width: 70%;
-    height: 70%;
-    transition: transform 0.3s ease;
-}
-
-#goleira5 img:hover {
-    transform: scale(1.1); 
-}
-#goleira5 p{
-    color: #ffffff;
-    font-family: "Raleway";
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: -5%;
-    margin-left: 5px;
-}
-
 
 #div_ZAGUEIRAS p{
     color: #777777;
@@ -535,7 +481,7 @@ body {
     margin-left: 5px;
 }
 
- .box8{
+ .box08{
     border-top-right-radius: 25%;
     margin-left: 150px;
     margin-top: -230px;
@@ -555,6 +501,90 @@ body {
     transform: scale(1.1); 
 }
 #zagueira3 p{
+    color: #ffffff;
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -7%;
+    margin-left: 5px;
+}
+
+.box09{
+    border-top-right-radius: 25%;
+    margin-left: 950px;
+    margin-top: -230px;
+    width: 12%;
+    height: 230px;
+    background-image: linear-gradient(to top, #000000ac, #373333, #9f9f9fc6);
+}
+#zagueira4 img{
+    margin-left: 25px;
+    margin-top: 40px;
+    width: 70%;
+    height: 70%;
+    transition: transform 0.3s ease;
+}
+
+#zagueira4 img:hover {
+    transform: scale(1.1); 
+}
+#zagueira4 p{
+    color: #ffffff;
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -7%;
+    margin-left: 5px;
+}
+.box010{
+    border-top-right-radius: 25%;
+    margin-left: 1200px;
+    margin-top: -240px;
+    width: 12%;
+    height: 230px;
+    background-image: linear-gradient(to top, #000000ac, #373333, #9f9f9fc6);
+
+}
+#zagueira5 img{
+    margin-left: 25px;
+    margin-top: 40px;
+    width: 70%;
+    height: 70%;
+    transition: transform 0.3s ease;
+}
+
+#zagueira5 img:hover {
+    transform: scale(1.1); 
+}
+#zagueira5 p{
+    color: #ffffff;
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 9%;
+    margin-left: 5px;
+}
+.box011{
+    border-top-right-radius: 25%;
+    margin-left: 150px;
+    margin-top: 40px;
+    width: 12%;
+    height: 230px;
+    background-image: linear-gradient(to top, #000000ac, #373333, #9f9f9fc6);
+  
+}
+#zagueira6 img{
+    margin-left: 25px;
+    margin-top: 40px;
+    width: 70%;
+    height: 70%;
+    transition: transform 0.3s ease;
+}
+
+#zagueira6 img:hover {
+    transform: scale(1.1); 
+}
+#zagueira6 p{
     color: #ffffff;
     font-family: "Raleway";
     font-weight: bold;
@@ -715,33 +745,6 @@ body {
     font-weight: bold;
     font-size: 20px;
     margin-top: 1%;
-    margin-left: 5px;
-}
-.box14{
-    border-top-right-radius: 25%;
-    margin-left: 150px;
-    margin-top: 25px;
-    width: 12%;
-    height: 230px;
-    background-image: linear-gradient(to top, #000000ac, #373333, #9f9f9fc6);
-}
-#lateral6 img{
-    margin-left: 25px;
-    margin-top: 40px;
-    width: 70%;
-    height: 70%;
-    transition: transform 0.3s ease;
-}
-
-#lateral6 img:hover {
-    transform: scale(1.1); 
-}
-#lateral6 p{
-    color: #ffffff;
-    font-family: "Raleway";
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 10%;
     margin-left: 5px;
 }
 
@@ -954,6 +957,93 @@ body {
     margin-top: -3%;
     margin-left: 5px;
 }
+
+.box022{
+    border-top-right-radius: 25%;
+    margin-left: 690px;
+    margin-top: -230px;
+    width: 12%;
+    height: 230px;
+    background-image: linear-gradient(to top, #000000ac, #373333, #9f9f9fc6);
+}
+#meia8 img{
+    margin-left: 25px;
+    margin-top: 40px;
+    width: 70%;
+    height: 70%; 
+transition: transform 0.3s ease;
+}
+
+#meia8 img:hover {
+    transform: scale(1.1); 
+}
+  
+#meia8 p{
+    color: #ffffff;
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -3%;
+    margin-left: 5px;
+}
+.box023{
+    border-top-right-radius: 25%;
+    margin-left: 950px;
+    margin-top: -230px;
+    width: 12%;
+    height: 230px;
+    background-image: linear-gradient(to top, #000000ac, #373333, #9f9f9fc6);
+}
+#meia9 img {
+    margin-left: 25px;
+    margin-top: 40px;
+    width: 70%;
+    height: 70%;
+    transition: transform 0.3s ease;
+}
+
+#meia9 img:hover {
+    transform: scale(1.1); 
+}
+  
+#meia9 p{
+    color: #ffffff;
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -3%;
+    margin-left: 5px;
+}
+
+.box024{
+    border-top-right-radius: 25%;
+    margin-left: 1200px;
+    margin-top: -230px;
+    width: 12%;
+    height: 230px;
+    background-image: linear-gradient(to top, #000000ac, #373333, #9f9f9fc6);
+}
+#meia10 img {
+    margin-left: 25px;
+    margin-top: 40px;
+    width: 70%;
+    height: 70%;
+    transition: transform 0.3s ease;
+}
+
+#meia10 img:hover {
+    transform: scale(1.1); 
+}
+  
+#meia10 p{
+    color: #ffffff;
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -3%;
+    margin-left: 5px;
+}
+
 
 #div_atacante p{
     color: #777777;
@@ -1198,34 +1288,7 @@ transition: transform 0.3s ease;
     margin-top: -3%;
     margin-left: 5px;
 }
-.box30{
-    border-top-right-radius: 25%;
-    margin-left: 950px;
-    margin-top: -230px;
-    width: 12%;
-    height: 230px;
-    background-image: linear-gradient(to top, #000000ac, #373333, #9f9f9fc6);
-}
-#atacante9 img {
-    margin-left: 25px;
-    margin-top: 40px;
-    width: 70%;
-    height: 70%;
-    transition: transform 0.3s ease;
-}
 
-#atacante9 img:hover {
-    transform: scale(1.1); 
-}
-  
-#atacante9 p{
-    color: #ffffff;
-    font-family: "Raleway";
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: -3%;
-    margin-left: 5px;
-}
 #div_fim{
 width: 100%;
 height: 1000vw;

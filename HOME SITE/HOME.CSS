@@ -76,7 +76,7 @@ body {
 }
 #li_TITULOS {
     position: absolute;
-    margin-top: 5px;
+    margin-top: -5px;
     margin-left: -25%;
     font-size: 1vw;
     font-family:"Raleway";

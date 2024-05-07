@@ -59,7 +59,7 @@ body {
 }
 #li_clube {
     position: absolute;
-    margin-top: 5px;
+    margin-top: -5px;
     margin-left: -35%;
     font-size: 1vw;
     font-family:"Raleway";

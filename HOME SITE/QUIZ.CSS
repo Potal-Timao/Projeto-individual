@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-image: url(ASSETS/telaFundoQuiz.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #000000;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway";
+    width: 100%;
+}
+
+#img_corinthians {
+    width: 136px;
+    height: 171px;
+
+  
+}
+button {
+    cursor: pointer;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 900px;
+    max-width: 800px;
+    border: 2px solid #e1e1e6;
+    border-radius: 6px;
+    padding: 16px;
+    box-shadow: 0 0 2px 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.perguntas_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.perguntas {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.respostas_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.next_quiz {
+    margin-top: 32px;
+}
+
+.button {
+    background-color: rgba(132, 114, 72, 1);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 6px;
+    height: 48px;
+    padding: 0 32px;
+    transition: filter 0.2s;
+}
+
+.button:not(:disabled):hover {
+    filter: brightness(0.8);
+}
+
+.answer:disabled {
+    cursor: not-allowed;
+}
+
+.hide {
+    display: none;
+}
+
+.correct,
+.incorrect {
+    width: 100%;
+}
+
+.correct {
+    background-color: #049d48;
+}
+
+.incorrect {
+    background-color: #a10101;
+}
+
+.mensagem_final {
+    font-size: 20px;
+    text-align: center;
+    font-family: "Raleway";
+}
+
+.mensagem_final span {
+    display: block;
+    margin-top: 8px;
+    font-family: "Raleway";
+    font-weight: bold;
+}
+.voltar {
+    width: 35px;
+    position: absolute; 
+    top: 35px;
+    left: 45px;
+}
+#voltar span {
+    position: absolute;
+    top: 45px; 
+    left: 90px; 
+    color: white; 
+    font-family: "Raleway"; 
+    font-size: 1.5em;
+    font-weight:lighter; 
+}

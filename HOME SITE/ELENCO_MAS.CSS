@@ -132,7 +132,7 @@ body {
 }
 #li_sobre_mim {
     position: absolute;
-    margin-top: 5px;
+    margin-top: -5px;
     margin-left: 30%;
     font-size: 1vw;
     font-family:"Raleway";

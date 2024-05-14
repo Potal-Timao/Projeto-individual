@@ -245,7 +245,7 @@ body {
     transform: translate(-50%, -50%);
     margin: 0;
     font-family: "Raleway";
-    font-size: 4em; 
+    font-size: 2.2em; 
     font-weight: bold;
 }
 
@@ -285,6 +285,47 @@ body {
     background-color: #000000;
     margin-top: 5px; 
 }
+#p_masculino p{
+    color: #ffffff;
+    font-family: "Raleway";
+    margin-top: -19px;
+    margin-left: 645px;
+    font-size: 1em; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
+#p_masculino:hover p{
+    font-size: 1.1em; 
+    color: #ff0000; 
+}
+
+#p_feminino p{
+    color: #ffffff;
+    font-family: "Raleway";
+    margin-top: 25px;
+    margin-left: 745px;
+    font-size: 1em; 
+    cursor: pointer;
+    font-weight: lighter;
+    transition: all 0.7s ease; 
+}
+
+#p_feminino:hover p{
+    font-size: 1.1em; 
+    color: #ff0000; 
+}
+#p_feminino a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+
+
+
+
+
+
 #div_mundial p{
     color: #777777;
     font-family: "Raleway"; 
@@ -2003,79 +2044,6 @@ body {
     margin-top: -3%;
     margin-left: 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #div_fim{
 width: 100%;

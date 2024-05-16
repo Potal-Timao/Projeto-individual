@@ -67,22 +67,18 @@ function finishGame() {
 
     var message = "";
 
-    switch (true) {
-        case performance >= 80:
-            message = "Torcedor raiz!";
-            break;
-        case performance >= 60:
-            message = "Torcedor Fiel!";
-            break;
-        case performance >= 50:
-            message = "Torcedor Mediano!";
-            break;
-            case performance >= 30:
-                message = "Torcedor Modinha!";
-                break;
-            default:
-                message = "Tem certeza que você torce para o corinthians? SOME DAQUI !"
-        }
+    if (performance >= 80) {
+        message = "Torcedor raiz!";
+    } else if (performance >= 60) {
+        message = "Torcedor Fiel!";
+    } else if (performance >= 50) {
+        message = "Torcedor Mediano!";
+    } else if (performance >= 30) {
+        message = "Torcedor Modinha!";
+    } else {
+        message = "Tem certeza que você torce para o corinthians? SOME DAQUI !";
+    }
+    
     perguntaContainer.innerHTML = `<p class="mensagem_final">Você acertou ${totalCorrect} de ${totalQuestion} questões!<span>Resultado: ${message}</span></p> 
     <button onclick="window.location.reload()" class="button">
     Refazer quiz!

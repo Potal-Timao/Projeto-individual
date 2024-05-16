@@ -88,7 +88,7 @@ body {
 }
 #li_jogos {
     position: absolute;
-    margin-top: 5px;
+    margin-top: -5px;
     margin-left: -15%;
     font-size: 1vw;
     font-family:"Raleway";

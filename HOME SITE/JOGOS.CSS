@@ -327,7 +327,7 @@ body {
 }
 
 .container {
-    margin-top: 600px;
+    margin-top: 1750px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1413,6 +1413,549 @@ body {
 }
 
 .vs_14 {
+    margin-right: 7px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px
+}
+
+.div_escudos img {
+
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+    margin: 0 2px;
+}
+
+.local {
+
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.local span {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.div_jogo_15 {
+    margin-top: 50PX;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    font-family: "Raleway";
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+.div_texto p {
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.div_escudos {
+
+    display: flex;
+}
+
+.corinthians {
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    
+
+}
+
+.gremio{
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    padding: 5PX;
+}
+
+.div_texto span {
+    font-weight: lighter;
+    font-size: 14px;
+    margin-left: 5px;
+    
+}
+
+.vs_15 {
+    margin-right: 7px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px
+}
+
+.div_escudos img {
+
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+    margin: 0 2px;
+}
+
+.local {
+
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.local span {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.div_jogo_16 {
+    margin-top: 50PX;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    font-family: "Raleway";
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+.div_texto p {
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.div_escudos {
+
+    display: flex;
+}
+
+.corinthians {
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    
+
+}
+
+.atleticoMG{
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    padding: 5PX;
+}
+
+.div_texto span {
+    font-weight: lighter;
+    font-size: 14px;
+    margin-left: 5px;
+    
+}
+
+.vs_16 {
+    margin-right: 7px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px
+}
+
+.div_escudos img {
+
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+    margin: 0 2px;
+}
+
+.local {
+
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.local span {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+
+.div_jogo_17 {
+    margin-top: 50PX;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    font-family: "Raleway";
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+.div_texto p {
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.div_escudos {
+
+    display: flex;
+}
+
+.corinthians {
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    
+
+}
+
+.juventude{
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    padding: 5PX;
+}
+
+.div_texto span {
+    font-weight: lighter;
+    font-size: 14px;
+    margin-left: 5px;
+    
+}
+
+.vs_17 {
+    margin-right: 7px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px
+}
+
+.div_escudos img {
+
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+    margin: 0 2px;
+}
+
+.local {
+
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.local span {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+
+
+.div_jogo_18 {
+    margin-top: 50PX;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    font-family: "Raleway";
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+.div_texto p {
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.div_escudos {
+
+    display: flex;
+}
+
+.corinthians {
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    
+
+}
+
+.bragantino{
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    padding: 5PX;
+}
+
+.div_texto span {
+    font-weight: lighter;
+    font-size: 14px;
+    margin-left: 5px;
+    
+}
+
+.vs_18 {
+    margin-right: 7px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px
+}
+
+.div_escudos img {
+
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+    margin: 0 2px;
+}
+
+.local {
+
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.local span {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+
+.div_jogo_19 {
+    margin-top: 50PX;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    font-family: "Raleway";
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+.div_texto p {
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.div_escudos {
+
+    display: flex;
+}
+
+.corinthians {
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    
+
+}
+
+.fluminense{
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    padding: 5PX;
+}
+
+.div_texto span {
+    font-weight: lighter;
+    font-size: 14px;
+    margin-left: 5px;
+    
+}
+
+.vs_19{
+    margin-right: 7px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px
+}
+
+.div_escudos img {
+
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+    margin: 0 2px;
+}
+
+.local {
+
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.local span {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.div_jogo_20 {
+    margin-top: 50PX;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    font-family: "Raleway";
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+.div_texto p {
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.div_escudos {
+
+    display: flex;
+}
+
+.corinthians {
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    
+
+}
+
+.fortaleza{
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    padding: 5PX;
+}
+
+.div_texto span {
+    font-weight: lighter;
+    font-size: 14px;
+    margin-left: 5px;
+    
+}
+
+.vs_20{
+    margin-right: 7px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px
+}
+
+.div_escudos img {
+
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+    margin: 0 2px;
+}
+
+.local {
+
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.local span {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.div_jogo_21 {
+    margin-top: 50PX;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    font-family: "Raleway";
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+.div_texto p {
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+
+}
+
+.div_escudos {
+
+    display: flex;
+}
+
+.corinthians {
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    
+
+}
+
+.flamengo{
+    font-weight: bold;
+    font-family: "Raleway";
+    margin-top: 25px;
+    padding: 5PX;
+}
+
+.div_texto span {
+    font-weight: lighter;
+    font-size: 14px;
+    margin-left: 5px;
+    
+}
+
+.vs_21{
     margin-right: 7px;
     font-size: 24px;
     font-weight: bold;

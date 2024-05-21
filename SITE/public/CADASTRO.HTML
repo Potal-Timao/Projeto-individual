@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./CADASTRO.CSS">
+    <link rel="icon" href="./assets/ogoCorinthians.png" type="image/x-icon">
+    <script src="./js/sessao.js"></script>
+    <title>Portal Timão | Cadastro</title>
+</head>
+
+<body>
+    <div id="cadastro">
+        <div id="img_fundo">
+
+            <div id="formulario">
+                <h2 class="cadastro-h2">CADASTRO</h2>
+                <h3 class="cadastro-h3">Insira seus dados para jogar</h3>
+                <div>
+                    <select typw="text" id="select_time">
+                        <option value="#">Qual é o seu time do coração</option>
+                        <option value="7">Corinthians</option>
+                        <option value="1">Athletico</option>
+                        <option value="2">Atlético-GO</option>
+                        <option value="3">Atlético-MG</option>
+                        <option value="4">Bahia</option>
+                        <option value="5">Botafogo</option>
+                        <option value="6">Bragantino</option>
+                        <option value="8">Criciúma</option>
+                        <option value="9">Cruzeiro</option>
+                        <option value="10">Cuiabá</option>
+                        <option value="11">Flamengo</option>
+                        <option value="12">Fluminense</option>
+                        <option value="13">Fortaleza</option>
+                        <option value="14">Grêmio</option>
+                        <option value="15">Internacional</option>
+                        <option value="16">Juventude</option>
+                        <option value="17">Palmeiras</option>
+                        <option value="18">São Paulo</option>
+                        <option value="19">Vasco</option>
+                        <option value="20">Vitória </option>
+
+                    </select>
+                    <input type="text" id="ipt_nome" name="nome" placeholder="Nome">
+                    <input type="text" id="ipt_telefone" name="telfone" placeholder="Telefone">
+                    <input type="text" id="ipt_email" name="email" placeholder="Email">
+                    <input type="password" id="ipt_senha" name="senha" placeholder="Senha">
+                    <input type="password" id="ipt_confirmar_senha" name="senha" placeholder="Confirmar senha">
+                    <button onclick="cadastrar()" type="button"> Criar conta </button>
+
+                    <h3 class="cadastro-h3">Já tem cadastro? <span style="font-weight: bold; "> <a href="./LOGIN.HTML">
+                                <u>Clique aqui para acessar.</u> </span></h3> </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="voltar">
+            <a href="./HOME.HTML"> <img class="voltar" src="./assets/ogoCorinthians.png" alt="">
+                <span>Voltar</span> </a>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+
+
+
+    function cadastrar() {
+
+        var times = select_time.value;
+
+        if (times != 7) {
+            for (var index = 0; index < 10; index++) {
+                alert("ACESSO BLOQUEADO, VOCÊ NÃO TORCE PARA O TIMÃO")
+            }
+
+        }
+
+        var time_que_torce = select_time.value;
+        var nome = ipt_nome.value;
+        var telefone = ipt_telefone.value;
+        var email = ipt_email.value;
+        var senha = ipt_senha.value;
+        var confirmar_senha = ipt_confirmar_senha.value;
+
+
+        if (
+            time_que_torce == "" ||
+            nome == "" ||
+            telefone == "" ||
+            email == "" ||
+            senha == "" ||
+            confirmar_senha == ""
+        ) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "(Mensagem de erro para todos os campos em branco)";
+
+            finalizarAguardar();
+            return false;
+        } else {
+            //   setInterval(sumirMensagem, 5000);
+            // Enviando o valor da nova input
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    time_que_torceServer: time_que_torce,
+                    nomeServer: nome,
+                    telefoneServer: telefone,
+                    emailServer: email,
+                    senhaServer: senha
+                    // empresaServer: empresaVar
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("resposta: ", resposta);
+                    setTimeout(() => {
+                        window.location = "./LOGIN.HTML";
+                    }, "1000");
+                })
+                .catch(function (resposta) {
+                    console.log(`#ERRO: ${resposta}`);
+                });
+        }
+    }
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./QUIZ.CSS">
+    <script src="QUIZ.JS" async></script>
+    <link rel="icon" href="./assets/ogoCorinthians.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <title>Portal Timão | Quiz</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div id="img_corinthians">
+            <img id="img_corinthians" src="./assets/ogoCorinthians.png">
+        </div>
+            <div class="perguntas_container hide ">
+                <span class="perguntas">pergunta aqui?</span>
+                <div class="respostas_container">
+                    <button class="answer button">respostas1</button>
+                    <button class="answer button">respostas2</button>
+                    <button class="answer button">respostas3</button>
+                    <button class="answer button">respostas4</button>
+                </div>
+            </div>
+            <div class="controle_container">
+                <button class="start_quiz button"> Começar quiz!</button>
+                <button class="next_quiz button hide"> Próxima pergunta!</button>
+            </div>
+            <div id="voltar">
+                 <img class="voltar" src="./assets/ogoCorinthians.png" alt="">
+                    <span id="nome"></span> </span> 
+            </div>
+    
+</div>
+</body>
+</html>
+<script>
+    console.log(sessionStorage)
+nome.innerHTML = `Bem Vindo (a), ${sessionStorage.NOME_USUARIO}`;
+</script>

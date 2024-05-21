@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./LOGIN.CSS">
+    <link rel="icon" href="./assets/ogoCorinthians.png" type="image/x-icon">
+    <script src="./js/sessao.js"></script>
+    <title>Portal Timão | Login</title>
+</head>
+
+<body>
+    <div id="login">
+        <div id="img_fundo">
+
+            <div id="formulario">
+                <h2>LOGIN</h2>
+                <h3>Insira seus dados corretamente</h3>
+                <form>
+                    <input type="text" id="email" name="email" placeholder="Email ou CPF">
+                    <input type="password" id="senha" name="senha" placeholder="Senha">
+                    <button onclick="entrar()" type="button"> Entrar </button>
+
+                    <h3>Ainda não tem uma conta? <span style="font-weight: bold; "> <a href="CADASTRO.HTML"> <u>Criar
+                                    uma conta.</u> </span></h3> </a>
+                </form>
+            </div>
+        </div>
+        <div id="voltar">
+            <a href="HOME.HTML"> <img class="voltar" src="./assets/ogoCorinthians.png" alt="">
+                <span>Voltar</span> </a>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+    function entrar() {
+
+
+        var emailVar = email.value;
+        var senhaVar = senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        
+        }
+        else {
+
+            console.log("FORM LOGIN: ", emailVar);
+            console.log("FORM SENHA: ", senhaVar);
+
+            fetch("/usuarios/autenticar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    emailServer: emailVar,
+                    senhaServer: senhaVar
+                })
+            }).then(function (resposta) {
+                console.log("ESTOU NO THEN DO entrar()!")
+                console.log(resposta)
+                console.log("resposta")
+
+                if (resposta.ok) {
+                    console.log(resposta);
+
+                    resposta.json().then(json => {
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+                        sessionStorage.EMAIL_USUARIO = json.email;
+                        sessionStorage.NOME_USUARIO = json.nome;
+                        sessionStorage.ID_USUARIO = json.idUsuario;
+
+                        setTimeout(function () {
+                            window.location = "./QUIZ.html";
+                        }, 1000); // apenas para exibir o loading
+
+                    });
+
+                } else {
+                    console.log("Houve um erro ao tentar realizar o login!");
+
+                    // Mudar a borda das inputs para vermelho
+                    document.getElementById("email").style.borderColor = "red";
+                    document.getElementById("senha").style.borderColor = "red";
+
+                    // Exibir uma mensagem de erro
+                    var mensagemErro = document.createElement("p");
+                    mensagemErro.textContent = "Email ou senha incorretos.";
+                    mensagemErro.style.color = "red";
+                    var formulario = document.getElementById("formulario");
+                    formulario.appendChild(mensagemErro);
+                }
+
+
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+
+        }
+    }
+
+</script>

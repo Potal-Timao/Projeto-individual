@@ -1,0 +1,484 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+   
+    
+}
+
+#div_tela_home{
+    
+    width: 100%;
+    height: 100vh   ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+
+}
+#div_container {
+    background-color: black;
+    border-bottom: 3px solid transparent;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    
+}
+#ul_navbar {
+    font-family:"Raleway";
+    color: #ffffff;
+    list-style: none;
+    display: flex;
+    font-size: 1vw;
+    align-items: center;
+    height: 100px;
+    justify-content: space-between;
+}
+#img_logo {
+    position: absolute;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    top: 15px;
+    left: 4%;
+    margin-top: 5px;
+    width: 50px;
+    transition: transform 0.3s ease; 
+}
+
+#img_logo:hover {
+    transform: scale(1.1); 
+}
+
+
+#li_clube {
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -35%;
+    font-size: 1vw;
+    font-family:"Raleway";
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.7s ease;
+
+}
+#li_clube:hover {
+    font-size: 1.2vw; 
+    color: #ff0000; 
+}
+#li_TITULOS {
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -25%;
+    font-size: 1vw;
+    font-family:"Raleway";
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
+#li_TITULOS:hover {
+    font-size: 1.2vw; 
+    color: #ff0000; 
+}
+#li_jogos {
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -15%;
+    font-size: 1vw;
+    font-family:"Raleway";
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
+#li_jogos:hover {
+    font-size: 1.2vw; 
+    color: #ff0000; 
+}
+#li_noticias {
+    position: absolute;
+    margin-top: -5px;
+    margin-left:10%;
+    font-size: 1vw;
+    font-family:"Raleway";
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.7s ease;
+
+}
+#li_noticias:hover {
+    font-size: 1.2vw; 
+    color: #ff0000; 
+}
+#li_futebol {
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 20%;
+    font-size: 1vw;
+    font-family:"Raleway";
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
+#li_futebol:hover {
+    font-size: 1.2vw; 
+    color: #ff0000; 
+}
+#li_sobre_mim {
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 30%;
+    font-size: 1vw;
+    font-family:"Raleway";
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
+#li_sobre_mim:hover {
+    font-size: 1.2vw; 
+    color: #ff0000; 
+}
+
+#img_corinthians {
+    width: 136px;
+    height: 171px;
+    margin-left: 22.5vw;
+    margin-top: -3vw;
+}
+
+#img_poderoso{
+    margin-left: 5vw;
+    margin-top: -9.5vw;
+    cursor: pointer;
+}
+
+#img_chute{
+    margin-left: 16.5vw;
+    margin-top: -6.4vw;
+    cursor: pointer;
+}
+
+#img_fiel{
+    width: 136px;
+    height: 171px;
+    margin-left: 25vw;
+    margin-top: -4.5vw;
+    cursor: pointer;
+}
+
+#img_universo{
+    
+    margin-left: 35vw;
+    margin-top: -12vw;
+    cursor: pointer;
+}
+#img_neo{
+    width: 136px;
+    height: 171px;
+    margin-left: 59vw;
+    margin-top: -5vw;
+    cursor: pointer;
+    display: flex;
+}
+
+
+.slider{
+    margin: 0 auto;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: -4vw;
+}
+
+.slides{
+    width: 400%; 
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 1s;
+    
+}
+
+.slide img{
+    width: 100%;
+    
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    margin-left: 350px;
+}
+
+.manual-btn{
+    border: 2px solid #000000;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: #000;
+}
+
+#radio1:checked ~.first{
+   margin-left: 0;
+} 
+#radio2:checked ~.first{
+    margin-left: -25%;
+ } 
+
+ #radio3:checked ~.first{
+    margin-left: -50%;
+ } #radio4:checked ~.first{
+    margin-left: -75%;
+ } 
+ 
+ .navigation-auto div{
+    border: 2px solid yellow;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+
+ }
+
+ .navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 435px;
+     display: flex;
+    justify-content: center;
+    margin-left: 350px;
+ }
+ .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+
+ }
+ #radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #000;
+ }
+ #radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #000;
+ }
+ #radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #000;
+ }
+ #radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #000;
+ }
+
+ #img_anuncio {
+    position: relative;
+    width: 100%; 
+    max-width: 800px; 
+    margin: auto;
+    top: -15px; 
+    margin-left: 350px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+#div_elenco h2{
+ color: white;
+    font-family:"Raleway" ;   
+margin-left: 618px;
+font-size: 2vw;
+margin-top: auto;
+}
+
+
+#div_box {
+    background-image: linear-gradient(to left, #999797, #FFFCFC);
+    width: 100%;
+    height: 460px;
+    margin-top: 150px;
+    position: relative; 
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+#div_box h2 {
+    font-family: "Raleway";
+    font-size: 2vw;
+    margin: 0 auto; 
+    position: absolute; 
+    top: 40%;
+    left: 55%; 
+    transform: translate(-50%, -50%); 
+    text-shadow:  0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+#div_box button {
+    font-family: "Raleway";
+    font-size: 1.5vw;
+    width: 200px;
+    height: 60px;
+    margin-top: 350px;
+    position: absolute;
+    color: #FFFCFC;
+    background-color: #000;
+    margin-left: 25vw;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease; 
+}
+
+#div_box button:hover {
+    transform: scale(1.1); 
+}
+#div_box img {
+    margin-top: 27px;
+    margin-left: 88px;
+}
+
+#noticias h1{
+    margin-top: 75px;
+    margin-left: 45%;
+    font-family: "Raleway";
+    text-shadow:  0px 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+#noticias h2{
+    margin-top: -45px;
+    margin-left: 43%;
+    font-family: "Raleway";
+    font-size: 3vw;
+    text-shadow:  0px 10px 10px rgba(0, 0, 0, 0.5);
+   
+
+
+}
+
+#noticias img {
+    margin-left: 185px;
+    margin-top: 50px;
+    transition: transform 0.3s ease; 
+    border-color: #000;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+
+}
+
+#noticias img:hover {
+    transform: scale(1.1); 
+    border-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+#p_1{
+    margin-top: 1vw ;
+    margin-left: 220px;
+    font-family: "Raleway";
+    text-shadow:  0px 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+#p_2{
+    margin-top: -5.5vw;
+    margin-left: 680px;
+    font-family: "Raleway";
+    text-shadow:  0px 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+#p_3{
+    margin-top: -7vw;
+    margin-left: 1120px;
+    font-family: "Raleway"; 
+    text-shadow:  0px 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+#baner{
+    margin-top: 150px;
+    margin-left: 280px;
+    cursor: pointer;
+    
+}
+
+#div_patrocinadores p{
+    font-family: "Raleway"; 
+    font-size: x-large;
+    text-shadow:#000000;
+    margin-top: 100px;
+    margin-left: 280px;
+}
+
+#linha_patrocinadores{
+   width:  1100px;
+    height: 1px;
+    margin-left: 280px;
+    background-color: #000000;
+}
+
+#img1{
+    margin-top: 4vw;
+    margin-left: 550px;
+}
+#img2{
+    margin-top: -5vw;
+    margin-left: 870px;
+}
+#img3{
+    margin-top: 3.5vw;
+    margin-left: 280px;
+}
+#img4{
+    margin-top: -4.5vw;
+    margin-left: 600px;
+}
+#img5{
+    margin-top: -5.5vw;
+    margin-left: 890px;
+}
+#img6{
+    margin-top: -5.5vw;
+    margin-left: 1170px;
+}
+#img7{
+    margin-top: 2.5vw;
+    margin-left: 280px;
+}
+#img8{
+    margin-top: -4.3vw;
+    margin-left: 600px;
+}
+#img9{
+    margin-top: -5.5vw;
+    margin-left: 890px;
+}
+#img10{
+    margin-top: -5.5vw;
+    margin-left: 1170px;
+}
+
+#linha_fim{
+    margin-top: 50px;
+    width:  1100px;
+     height: 1px;
+     margin-left: 280px;
+     background-color: #000000;
+ }

@@ -1,0 +1,617 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+    font-family: "Raleway";
+    color: #ffffff;
+    background-color: #000000;
+
+}
+#historia h1{
+    margin-top: 35px;
+    margin-left: 660px;
+
+}
+#historia p{
+    margin-top: 5px;
+    margin-left: 550px;
+ 
+}
+#div_1910 img{
+    margin-top: 80px;
+    margin-left: 100px;
+}
+.T{
+    font-size: 1.5em;
+    margin-top: -240px;
+    font-weight: bolder;
+    margin-left: 900px;
+}
+.T2{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 750px;
+}
+
+#div_1914 img{
+    margin-top: 50px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_1914{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -350px;
+   margin-left: 100px;
+}
+.T2_1914{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+
+
+#div_1918 img{
+    margin-top: 170px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_1918{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -200px;
+   margin-left: 900px;
+}
+.T2_1918{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 750px;
+}
+
+
+#div_1922 img{
+    margin-top: 130px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_1922{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -200px;
+   margin-left: 100px;
+}
+.T2_1922{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+
+
+#div_1926 img{
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_1926{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 900px;
+}
+.T2_1926{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+
+
+
+
+#div_1930 img{
+    margin-top: 200px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_1930{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_1930{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+
+
+#div_1934 img{
+    margin-top: 70px;
+    margin-left: 100px;
+    height: 400px;
+}
+.T1_1934{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -200px;
+   margin-left: 900px;
+}
+.T2_1934{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+
+
+#div_1940 img{
+    margin-top: 200px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_1940{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_1940{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+
+
+#div_1948 img{
+    margin-top: 200px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_1948{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 900px;
+}
+.T2_1948{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+
+
+
+#div_1953 img{
+    margin-top: 170px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_1953{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_1953{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+
+
+
+#div_1958 img{
+    margin-top: 170px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_1958{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 900px;
+}
+.T2_1958{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+
+
+#div_1960 img{
+    margin-top: 200px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_1960{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_1960{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+
+#div_1965 img{
+    margin-top: 70px;
+    margin-left: 100px;
+    height: 550px;
+    border-radius: 30%;
+     border: 2px dashed black;
+}
+.T1_1965{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 900px;
+}
+.T2_1965{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+
+#div_1971 img{
+    margin-top: 200px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_1971{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_1971{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+
+
+
+#div_1976 img{
+    margin-top: 70px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_1976{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 900px;
+}
+.T2_1976{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+
+#div_1977 img{
+    margin-top: 70px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_1977{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_1977{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+
+#div_1982 img{
+    margin-top: 70px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_1982{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 900px;
+}
+.T2_1982{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+
+#div_1983 img{
+    margin-top: 130px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_1983{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_1983{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+#div_1988 img{
+    margin-top: 130px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_1988{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 900px;
+}
+.T2_1988{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+#div_1990 img{
+    margin-top: 170px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_1990{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_1990{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+#div_1995 img{
+    margin-top: 70px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_1995{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 900px;
+}
+.T2_1995{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+#div_2000 img{
+    margin-top: 70px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_2000{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_2000{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+#div_2003 img{
+    margin-top: 70px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_2003{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 900px;
+}
+.T2_2003{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+#div_2007 img{
+    margin-top: 70px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_2007{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_2007{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+#div_2008 img{
+    margin-top: 170px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_2008{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 900px;
+}
+.T2_2008{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+#div_2009 img{
+    margin-top: 70px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_2009{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_2009{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+#div_2010 img{
+    margin-top: 70px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_2010{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -240px;
+   margin-left: 900px;
+}
+.T2_2010{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+#div_2012_L img{
+    margin-top: 120px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_2012{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_2012{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+#div_2012_M img{
+    margin-top: -15px;
+    margin-left: 900px;
+    width: 35%;
+}
+
+#div_2014 img{
+    margin-top: 5px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_2014{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 900px;
+}
+.T2_2014{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+
+#div_2015 img{
+    margin-top: 70px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_2015{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_2015{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+#div_2017 img{
+    margin-top: 70px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_2017{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 900px;
+}
+.T2_2017{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+#div_2018 img{
+    margin-top: 70px;
+    margin-left: 900px;
+    width: 35%;
+}
+.T1_2018{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 100px;
+}
+.T2_2018{
+    margin-top: 5px;
+    margin-left: 100px;
+    max-width: 550px;
+}
+#div_2019 img{
+    margin-top: 130px;
+    margin-left: 100px;
+    width: 35%;
+}
+.T1_2019{
+    font-weight: bolder;
+    font-size: 1.5em;
+   margin-top: -270px;
+   margin-left: 900px;
+}
+.T2_2019{
+    margin-top: 5px;
+    margin-left: 900px;
+    max-width: 550px;
+}
+.voltar {
+    width: 35px;
+    position: absolute; 
+    top: 35px;
+    left: 45px;
+    transition: all 0.7s ease;
+}
+#voltar:hover {
+    font-size: 1.2vw; 
+    color: #fa0000; 
+}
+#voltar span {
+    position: absolute;
+    top: 45px; 
+    left: 90px; 
+    color: rgb(255, 255, 255); 
+    font-family: "Raleway"; 
+    font-size: 1.5em;
+    font-weight:lighter; 
+}

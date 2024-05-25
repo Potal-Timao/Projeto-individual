@@ -111,12 +111,17 @@ body {
     color: #ffffff;
     cursor: pointer;
     transition: all 0.7s ease;
+    
 
 }
 #li_noticias:hover {
     font-size: 1.2vw; 
     color: #ff0000; 
+    
 }
+
+
+
 #li_futebol {
     position: absolute;
     margin-top: -5px;

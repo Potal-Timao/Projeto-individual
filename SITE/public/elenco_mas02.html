@@ -10,7 +10,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/elenc_mas02.css">
     <link rel="icon" href="./assets/ogoCorinthians.png" type="image/x-icon">
-    
+
     <title>Portal Timão | Elencos </title>
 </head>
 
@@ -19,13 +19,23 @@
         <div id="div_container">
             <ul id="ul_navbar">
                 <a href="home02.html"> <img id="img_logo" src="./assets/ogoCorinthians.png"></a>
-               <a href="historia02.html"> <li id="li_clube" style="text-decoration: none; ">HISTÓRIA</li></a>
-                <a href="TITULOS.HTML"><li id="li_TITULOS">TÍTULOS</li></a>
+                <a href="historia02.html">
+                    <li id="li_clube" style="text-decoration: none; ">HISTÓRIA</li>
+                </a>
+                <a href="TITULOS.HTML">
+                    <li id="li_TITULOS">TÍTULOS</li>
+                </a>
 
-                <a href="jogos02.html"><li id="li_jogos">JOGOS</li></a>
-                <li  id="li_noticias">ELENCOS</li>
-                <a href="quiz02.html"><li id="li_futebol">QUIZ</li></a>
-               <a href="sobre02.html"> <li id="li_sobre_mim">SOBRE MIM</li></a>
+                <a href="jogos02.html">
+                    <li id="li_jogos">JOGOS</li>
+                </a>
+                <li id="li_noticias">ELENCOS</li>
+                <a href="quiz02.html">
+                    <li id="li_futebol">QUIZ</li>
+                </a>
+                <a href="sobre02.html">
+                    <li id="li_sobre_mim">SOBRE MIM</li>
+                </a>
 
             </ul>
         </div>
@@ -54,7 +64,9 @@
             <a href="https://www.neoquimicaarena.com.br/" target="_blank"><img src="./assets/NeoQuimica.png"></a>
         </div>
 
-       
+        <div id="usuario">
+
+        </div>
         <div class="img_elencoF">
             <p>FUTEBOL MASCULINO</p>
             <img src="./assets/futebol masculino.png" alt="Imagem 1">
@@ -67,7 +79,9 @@
                 <p>ELENCO </p>
             </div>
             <div id="p_feminino">
-               <a href="elenco02.html"> <p>| FEMININO</p></a>
+                <a href="elenco02.html">
+                    <p>| FEMININO</p>
+                </a>
             </div>
             <div id="p_masculino">
                 <p>MASCULINO</p>
@@ -211,7 +225,7 @@
                     <img src="./assets/bidu.png">
                 </div>
             </div>
-    
+
             <div id="div_meia">
                 <p>MEIAS</p>
             </div>
@@ -358,7 +372,7 @@
             <div id="footer"></div>
         </div>
 
-    
+
     </div>
     </div>
     </div>
@@ -366,6 +380,11 @@
 </body>
 
 </html>
-<script src="HOME.js">
+<script>
+    var user = sessionStorage.NOME_USUARIO;
+    console.log(user)
+    if (user != undefined) {
+        usuario.innerHTML = `Bem Vindo(a), ${user}`;
+    }
 
 </script>

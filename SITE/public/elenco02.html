@@ -55,6 +55,9 @@
             <a href="https://www.neoquimicaarena.com.br/" target="_blank"><img src="./assets/NeoQuimica.png"></a>
         </div>
 
+        <div id="usuario">
+
+        </div>
        
 
         <div class="img_elencoF">
@@ -354,5 +357,11 @@
 </body>
 
 </html>
-<script src="./HOME.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.css"></script>
+<script>
+    var user = sessionStorage.NOME_USUARIO;
+    console.log(user)
+    if (user != undefined) {
+        usuario.innerHTML = `Bem Vindo(a), ${user}`;
+    }
+
+</script>

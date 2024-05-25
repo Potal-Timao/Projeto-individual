@@ -13,3 +13,9 @@ function nextImage(){
     }
     document.getElementById("radio" +count).checked = true;
 }
+
+var user =  sessionStorage.NOME_USUARIO;
+console.log(user)
+if(user != undefined){
+    usuario.innerHTML = `Bem Vindo(a), ${user}`;
+}

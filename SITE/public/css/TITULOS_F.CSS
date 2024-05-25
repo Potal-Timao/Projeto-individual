@@ -936,3 +936,12 @@ background-color: #000000;
     background-color: black;
     
  }
+ #usuario {
+    position: absolute;
+    color: black;
+    margin-left: 75vw;
+    margin-top: 17vh;
+    font-size: 25px;
+    font-family: "Raleway";
+    font-weight: 500;
+}

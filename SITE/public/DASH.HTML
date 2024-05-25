@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="DASH.CSS">
+  <link rel="icon" href="./assets/ogoCorinthians.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <title>Portal Timão | Dashboard</title>
+</head>
+
+<body style="display: flex;">
+  <div class="container">
+    <div class="chart-box">
+      <canvas id="myChartBarra"></canvas>
+    </div>
+    <div class="chart-box-pizza">
+      <canvas id="myChartPizza"></canvas> <!-- Adicionando o canvas para o gráfico de pizza -->
+    </div>
+    <div id="voltar">
+      <a href="home02.html"><img class="voltar" src="./assets/ogoCorinthians.png" alt=""> <span> Voltar para home
+        </span></a>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10',];
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'QUANTIDADE DE PERGUNTAS ACERTADAS POR TODOS JOGADORES',
+        
+        data: [30, 59, 80, 81, 56, 55, 40, 65, 59, 80],
+        backgroundColor: [
+          'rgba(201, 203, 207, 0.2)',
+          'rgba(201, 203, 207, 0.2)',
+          'rgba(201, 203, 207, 0.2)',
+          'rgba(201, 203, 207, 0.2)',
+          'rgba(201, 203, 207, 0.2)',
+          'rgba(201, 203, 207, 0.2)',
+          'rgba(201, 203, 207, 0.2)'
+        ],
+        borderColor: [
+          'rgb(201, 203, 207)',
+          'rgb(201, 203, 207)',
+          'rgb(201, 203, 207)',
+          'rgb(201, 203, 207)',
+          'rgb(201, 203, 207)',
+          'rgb(201, 203, 207)',
+          'rgb(201, 203, 207)'
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    // Configuração do gráfico de barras
+    const config = {
+      type: 'bar',
+      data: data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              color: 'white' // Define a cor do texto das escalas y
+            }
+          },
+          x: {
+            ticks: {
+              color: 'white' // Define a cor do texto das escalas x
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: 'white', // Define a cor do texto da legenda
+          
+            }
+          }
+        }
+      }
+    };
+
+    // Inicialização do gráfico de barras
+    var myChartBarra = new Chart(
+      document.getElementById('myChartBarra'),
+      config
+    );
+
+    // Configuração do gráfico de pizza
+    const labelsPie = ['CORRETAS', 'ERRADAS'];
+    const dataPie = {
+      labels: labelsPie,
+      datasets: [{
+        label: 'Quantidade de perguntas',
+        data: [75, 25], // Exemplo de dados para o gráfico de pizza (75% corretas, 25% erradas)
+        backgroundColor: [
+          'rgb(201, 203, 207,0.2)',
+          'rgba(255, 0, 0,0.2)'
+        ],
+        borderColor: [
+          'rgb(201, 203, 207.0.2)',
+          'rgb(201, 203, 207.0.2)'
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    // Configuração do gráfico de pizza
+    const configPie = {
+      type: 'pie',
+      data: dataPie,
+      options: {
+        plugins: {
+          legend: {
+            labels: {
+              color: 'white' // Define a cor do texto da legenda
+              
+            }
+          }
+        }
+      }
+    };
+
+    // Inicialização do gráfico de pizza
+    var myChartPizza = new Chart(
+      document.getElementById('myChartPizza'),
+      configPie
+    );
+  </script>
+</body>
+
+</html>

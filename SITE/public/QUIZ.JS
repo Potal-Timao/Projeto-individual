@@ -84,7 +84,7 @@ function finishGame() {
     Refazer quiz!
     </button>`;
 
-    
+
     nextButton.classList.add("hide");
 
    

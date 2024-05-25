@@ -54,7 +54,9 @@
             <a href="https://www.neoquimicaarena.com.br/" target="_blank"><img src="ASSETS/NeoQuimica.png"></a>
         </div>
 
-
+        <div id="usuario">
+            
+        </div>
         <div class="img_titulos">
             <p>GALERIA DE TÍTULOS FUTEBOL FEMININO</p>
             <img src="ASSETS/titulos f fundo.jpg" alt="Imagem 1">
@@ -250,4 +252,10 @@
 </body>
 
 </html>
-
+<script>
+    var user =  sessionStorage.NOME_USUARIO;
+console.log(user)
+if(user != undefined){
+    usuario.innerHTML = `Bem Vindo(a), ${user}`;
+}
+</script>

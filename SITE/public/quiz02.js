@@ -44,14 +44,16 @@ function displayProximaPergunta() {
 
 function selectAnswer(event) {
     var answerClicked = event.target;
-
+    
     if (answerClicked.dataset.correct) {
         answerClicked.classList.add("correct");
+   
         totalCorrect++;
     } else {
+      
         answerClicked.classList.add("incorrect");
     }
-
+    
     document.querySelectorAll(".answer").forEach(button => {
         if (button !== answerClicked) {
             button.disabled = true;
@@ -60,13 +62,48 @@ function selectAnswer(event) {
     nextButton.classList.remove("hide");
     currentQuestion++;
 }
+         
+    
 
+
+    
 function finishGame() {
+  
     var totalQuestion = questions.length;
     var performance = Math.floor((totalCorrect * 100) / totalQuestion);
+    var incorretas = 10 - totalCorrect;
+    var fkQuiz = 1; 
+ var id = sessionStorage.ID_USUARIO;
+    
+      
+
+         fetch("/quiz/finishGame", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    idServer: id,
+                    fkQuiz: fkQuiz,
+                    totalCorrect: totalCorrect,
+                    incorretas: incorretas
+                })
+            }).then(function (resposta) {
+
+                if (resposta.status == 500 || resposta.ok) {
+                    console.log("Dados do quiz cadastrados com sucesso!");   
+
+                } else {
+                    console.log("Houve um erro ao tentar realizar o quiz!");
+                }
+            }).catch(function (erro) {
+                console.log(erro);
+            });
+
+        
 
     var message = "";
-
+    
     if (performance >= 80) {
         message = "Torcedor raiz!";
     } else if (performance >= 60) {
@@ -86,11 +123,11 @@ function finishGame() {
     <button onclick="window.location.href = 'DASH.HTML'" class="button">
     Ir para dashboard!
     </button>`;
-
+    
     
     nextButton.classList.add("hide");
-
-   
+    
+    
     nextButton.removeEventListener("click", displayProximaPergunta);
 }
 
@@ -113,7 +150,7 @@ var questions = [
             { text: "Serginho Chulapa", correct: false },
             { text: "Ronaldo", correct: false },
             { text: "Rivellino", correct: false },
-        ],  
+        ],
     },
     {
         question: "Em que ano o Corinthians conquistou seu primeiro título brasileiro?",
@@ -154,7 +191,7 @@ var questions = [
     {
         question: "Qual goleiro revelado na base, tornou-se um dos maiores ídolos da história do Clube?",
         answer: [
-            { text: "Júlio César", correct: false},
+            { text: "Júlio César", correct: false },
             { text: "Ronaldo Giovanelli", correct: false },
             { text: "Dida", correct: true },
             { text: "Cássio", correct: false },
@@ -188,3 +225,71 @@ var questions = [
         ],
     },
 ];
+// var fkQuizServer = 1; 
+// var lista_respostas=[];
+// console.log(lista_respostas)
+
+
+// for (var cont = 0; cont < lista_respostas.length; cont++) {
+    
+//     fetch("/quiz/VerIdQuiz", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({
+//             fkQuizServer: fkQuizServer,
+//             perguntasServer: (cont + 1),
+//             resposta: lista_respostas[cont]
+//         })
+//     }).then(function (resposta) {
+//         console.log("ESTOU NO THEN DO entrar()!");
+//         console.log(resposta);
+//         console.log("resposta");
+        
+//         if (resposta.ok) {
+//             console.log(resposta);
+            
+//             resposta.json().then(json => {
+//                 console.log(json);
+//                 console.log(JSON.stringify(json));
+//             });
+
+//         } else {
+//             console.log("Houve um erro ao tentar realizar o quiz!");
+//         }
+//     }).catch(function (erro) {
+//         console.log(erro);
+//     });
+
+//     // Verificar perguntas que o usuário errou
+//     fetch("/quiz/VerPerguntasQueUsuarioErrou", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({
+//             fkQuizServer: fkQuizServer,
+//             perguntasServer: (cont + 1),
+//             resposta: lista_respostas[cont]
+//         })
+//     }).then(function (resposta) {
+//         console.log("ESTOU NO THEN DO entrar()!");
+//         console.log(resposta);
+//         console.log("resposta");
+
+//         if (resposta.ok) {
+//             console.log(resposta);
+
+//             resposta.json().then(json => {
+//                 console.log(json);
+//                 console.log(JSON.stringify(json));
+//             });
+
+//         } else {
+//             console.log("Houve um erro ao tentar realizar o quiz!");
+//         }
+//     }).catch(function (erro) {
+//         console.log(erro);
+//     });
+// }

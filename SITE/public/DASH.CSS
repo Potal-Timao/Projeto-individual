@@ -31,6 +31,7 @@ body {
     align-items: center;
     max-width: 800px;
     width: 100%;
+    height: 70%;
 }
 
 .chart-box {
@@ -38,19 +39,21 @@ body {
     border-radius: 6px;
     padding: 16px;
     margin-bottom: 16px;
-    width:70%; /* Define a largura da caixa para preencher completamente o espaço disponível */
+    width:70%; 
 }
 
 .chart-box canvas {
-    width: 70%; /* Define a largura do gráfico para preencher completamente a caixa */
-    height: 70%; /* Define a altura do gráfico para preencher completamente a caixa */
+    width: 70%; 
+    height: 70%; 
 }
+
 #voltar img {
     width: 35px;
     position: absolute; 
     top: 35px;
     left: 45px;
 }
+
 #voltar span {
     position: absolute;
     top: 45px; 
@@ -60,16 +63,58 @@ body {
     font-size: 1.5em;
     font-weight:lighter; 
 }
-/* Estilos para o gráfico de pizza */
+
+
 .chart-box-pizza {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
-    padding: 16px;
+    padding: 10px;
     margin-bottom: 16px;
-    width: 40%; /* Define a largura da caixa para preencher completamente o espaço disponível */
+    margin-top: 20PX;
+    width: 40%; 
+    margin-left: 70px; 
+    margin-right: auto; 
 }
 
 .chart-box-pizza canvas {
-    width: 100%; /* Define a largura do gráfico para preencher completamente a caixa */
-    height: auto; /* Define a altura do gráfico como automática para manter a proporção */
+    width: 100%; 
+    height: auto; 
 }
+
+
+.qtd_tentativas {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 10px;
+    margin-left: 340px;
+    margin-top: -345px;
+    width: 35%;
+    height: 35%;
+    text-align: center; 
+    line-height: calc(100% - 20px); 
+}
+
+#qtd_tentativas{
+    font-size: 24px;
+    font-family: "Raleway"; 
+    font-weight: 400;
+    }
+
+.media-dos-jogadores{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 10px;
+    margin-left: 340px; 
+    margin-top: 20PX; 
+    width: 35%; 
+    height: 35%;
+    text-align: center; 
+    line-height: calc(100% - 20px); 
+}
+#media{
+    margin-top: 5px;
+    font-size: 24px;
+    font-family: "Raleway"; 
+    font-weight: 400;
+}
+

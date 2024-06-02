@@ -14,125 +14,178 @@
   <title>Portal Timão | Dashboard</title>
 </head>
 
+
 <body style="display: flex;">
   <div class="container">
-    <div class="chart-box">
-      <canvas id="myChartBarra"></canvas>
-    </div>
+
     <div class="chart-box-pizza">
-      <canvas id="myChartPizza"></canvas> <!-- Adicionando o canvas para o gráfico de pizza -->
+      <p style="font-size: 17px; font-weight:500; font-family:Raleway ">Visualize seus acertos e erros totais.</p>
+      <canvas id="myChartPizza"></canvas>
     </div>
+
+    <div id="qtd_tentativas" class="qtd_tentativas"></div>
+    <div id="media" class="media-dos-jogadores"></div>
+
     <div id="voltar">
+      <p style="font-weight: 400; font-size: 24px; margin-top: -380px;">VEJA SEU DESEMPENHO NAS RODADAS</p>
       <a href="home02.html"><img class="voltar" src="./assets/ogoCorinthians.png" alt=""> <span> Voltar para home
         </span></a>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
-    const labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10',];
-    const data = {
-      labels: labels,
-      datasets: [{
-        label: 'QUANTIDADE DE PERGUNTAS ACERTADAS POR TODOS JOGADORES',
-        
-        data: [30, 59, 80, 81, 56, 55, 40, 65, 59, 80],
-        backgroundColor: [
-          'rgba(201, 203, 207, 0.2)',
-          'rgba(201, 203, 207, 0.2)',
-          'rgba(201, 203, 207, 0.2)',
-          'rgba(201, 203, 207, 0.2)',
-          'rgba(201, 203, 207, 0.2)',
-          'rgba(201, 203, 207, 0.2)',
-          'rgba(201, 203, 207, 0.2)'
-        ],
-        borderColor: [
-          'rgb(201, 203, 207)',
-          'rgb(201, 203, 207)',
-          'rgb(201, 203, 207)',
-          'rgb(201, 203, 207)',
-          'rgb(201, 203, 207)',
-          'rgb(201, 203, 207)',
-          'rgb(201, 203, 207)'
-        ],
-        borderWidth: 1
-      }]
-    };
-
-    // Configuração do gráfico de barras
-    const config = {
-      type: 'bar',
-      data: data,
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            ticks: {
-              color: 'white' // Define a cor do texto das escalas y
-            }
-          },
-          x: {
-            ticks: {
-              color: 'white' // Define a cor do texto das escalas x
-            }
-          }
+    graficos();
+    function graficos() {
+      var id = sessionStorage.ID_USUARIO;
+      fetch("/quiz/VerPerguntasQueUsuarioErrou", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
         },
-        plugins: {
-          legend: {
-            labels: {
-              color: 'white', // Define a cor do texto da legenda
-          
+        body: JSON.stringify({
+          idServer: id
+        })
+      }).then(function (resposta) {
+        console.log("quizResultado caiu aqui")
+
+        if (resposta.ok) {
+          console.log("resposta quizGrafico" + resposta);
+
+          resposta.json().then(json => {
+            console.log(json);
+            var obj = JSON.stringify(json);
+            sessionStorage.id = json.id;
+            console.log(obj);
+            plotarGrafico_1(json);
+
+          });
+
+        } else {
+          console.log("Houve um erro ao terminar o quiz!");
+
+          resposta.text().then(texto => {
+            console.error(texto);
+
+          });
+
+        }
+      }).catch(function (erro) {
+        console.log(erro);
+      })
+
+
+
+      fetch("/quiz/kpiTentativas", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          idServer: id
+        })
+      }).then(function (resposta) {
+        console.log("quizResultado caiu aqui")
+
+        if (resposta.ok) {
+          console.log("resposta quizGrafico" + resposta);
+
+          resposta.json().then(json => {
+            console.log(json);
+            var obj = JSON.stringify(json);
+            sessionStorage.id = json.id;
+            console.log(obj);
+            plotarGrafico_2(json);
+
+          });
+
+        } else {
+          console.log("Houve um erro ao terminar o quiz!");
+
+          resposta.text().then(texto => {
+            console.error(texto);
+
+          });
+
+        }
+      }).catch(function (erro) {
+        console.log(erro);
+      })
+
+      fetch(`/quiz/kpimedia/`)
+        .then(function (resposta) {
+          if (resposta.ok) {
+            resposta.json().then(function (dados) {
+              console.log("Dados recebidos: ", JSON.stringify(dados));
+
+
+              plotarGrafico_3(dados);
+            });
+          } else {
+            console.error('Nenhum dado encontrado na kpi1 ou erro na API');
+          }
+        })
+        .catch(function (error) {
+          console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+
+    }
+
+
+
+
+    function plotarGrafico_1(dados) {
+      var label = [''];
+      var acertos = dados.map(item => item.total_respostas_corretas);
+      var erros = dados.map(item => item.total_respostas_incorretas);
+      const labelsPie = ['CORRETAS', 'ERRADAS'];
+      const dataPie = {
+        labels: labelsPie,
+        datasets: [{
+          label: 'Quantidade de perguntas',
+          data: [acertos, erros],
+          backgroundColor: [
+            'rgb(201, 203, 207,0.7)',
+            'rgba(255, 0, 0,0.5)'
+          ],
+          borderColor: [
+            'rgb(201, 203, 207.0.7)',
+            'rgb(201, 203, 207.0.7)'
+          ],
+          borderWidth: 1
+        }]
+      };
+
+
+      const configPie = {
+
+        type: 'pie',
+        data: dataPie,
+        options: {
+          plugins: {
+            legend: {
+              labels: {
+                color: 'white'
+
+              }
             }
           }
         }
       }
-    };
 
-    // Inicialização do gráfico de barras
-    var myChartBarra = new Chart(
-      document.getElementById('myChartBarra'),
-      config
-    );
+      var myChartPizza = new Chart(
+        document.getElementById('myChartPizza'),
+        configPie
+      );
+    }
+    function plotarGrafico_2(dados) {
+      let tent = dados.map(item => item.tentativas);
+      qtd_tentativas.innerHTML += `Você realizou o quiz  <span style =" font-size: 70px; color: rgba(255, 0, 0,0.5);">  <br><br><br> ${tent} </span> <br><br><br><br><br><br><br><br><br> vezes no total`;
+    }
+    function plotarGrafico_3(dados) {
+      let mediaAcertos = dados.map(item => item.Acertos);
+      media.innerHTML += `Os jogadores mantêm média de  <span style =" font-size: 70px; color: rgba(255, 0, 0,0.5);">  <br><br><br> ${mediaAcertos} </span> <br><br><br><br><br><br><br><br><br><br><br>acertos no quiz. `;
+    }
 
-    // Configuração do gráfico de pizza
-    const labelsPie = ['CORRETAS', 'ERRADAS'];
-    const dataPie = {
-      labels: labelsPie,
-      datasets: [{
-        label: 'Quantidade de perguntas',
-        data: [75, 25], // Exemplo de dados para o gráfico de pizza (75% corretas, 25% erradas)
-        backgroundColor: [
-          'rgb(201, 203, 207,0.2)',
-          'rgba(255, 0, 0,0.2)'
-        ],
-        borderColor: [
-          'rgb(201, 203, 207.0.2)',
-          'rgb(201, 203, 207.0.2)'
-        ],
-        borderWidth: 1
-      }]
-    };
-
-    // Configuração do gráfico de pizza
-    const configPie = {
-      type: 'pie',
-      data: dataPie,
-      options: {
-        plugins: {
-          legend: {
-            labels: {
-              color: 'white' // Define a cor do texto da legenda
-              
-            }
-          }
-        }
-      }
-    };
-
-    // Inicialização do gráfico de pizza
-    var myChartPizza = new Chart(
-      document.getElementById('myChartPizza'),
-      configPie
-    );
   </script>
 </body>
 

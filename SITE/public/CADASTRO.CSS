@@ -136,3 +136,19 @@ button {
     font-weight:lighter; 
 }
 
+#formulario div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+#formulario div div {
+    color: white;
+}
+
+#formulario div div span {
+    margin-top: -5%;
+    margin-bottom: 5%;
+}

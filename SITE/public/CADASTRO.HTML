@@ -46,12 +46,26 @@
                         <option value="20">Vitória </option>
 
                     </select>
-                    <input type="text" id="ipt_nome" name="nome" placeholder="Nome">
-                    <input type="text" id="ipt_telefone" name="telfone" placeholder="Telefone">
-                    <input type="text" id="ipt_email" name="email" placeholder="Email">
-                    <input type="password" id="ipt_senha" name="senha" placeholder="Senha">
-                    <input type="password" id="ipt_confirmar_senha" name="senha" placeholder="Confirmar senha">
-                    <button onclick="cadastrar()" type="button"> Criar conta </button>
+                    <div id="validacao_nome">
+                        <input type="text" id="ipt_nome" name="nome" placeholder="Nome">
+                    </div>
+
+                    <div id="validacao_telefone">
+                        <input type="text" id="ipt_telefone" name="telfone" placeholder="Telefone">
+                    </div>
+
+                    <div id="validacao_email">
+                        <input type="text" id="ipt_email" name="email" placeholder="Email">
+                    </div>
+
+                    <div id="validacao_senha">
+                        <input type="password" id="ipt_senha" name="senha" placeholder="Senha">
+                    </div>
+
+                    <div id="validacao_confirmar_senha">
+                        <input type="password" id="ipt_confirmar_senha" name="senha" placeholder="Confirmar senha">
+                    </div>
+                    <button onclick="validar()" type="button"> Criar conta </button>
 
                     <h3 class="cadastro-h3">Já tem cadastro? <span style="font-weight: bold; "> <a href="./LOGIN.HTML">
                                 <u>Clique aqui para acessar.</u> </span></h3> </a>
@@ -71,25 +85,71 @@
 
 
 
-
-    function cadastrar() {
-
-        var times = select_time.value;
-
-        if (times != 7) {
-            for (var index = 0; index < 10; index++) {
-                alert("ACESSO BLOQUEADO, VOCÊ NÃO TORCE PARA O TIMÃO")
-            }
-
-        }
-
-        var time_que_torce = select_time.value;
+    function validar() {
         var nome = ipt_nome.value;
         var telefone = ipt_telefone.value;
         var email = ipt_email.value;
         var senha = ipt_senha.value;
         var confirmar_senha = ipt_confirmar_senha.value;
+        var time_que_torce = select_time.value;
 
+        var validado = true;
+
+
+        if (time_que_torce != 7) {
+            for( var cont = 0; cont <=100; cont++){
+                alert("ACESSO BLOQUEADO, VOCÊ NÃO TORCE PARA O TIMÃO");
+
+            }
+
+            validado = false;
+        }
+
+
+        if (nome.length < 3) {
+            ipt_nome.style.border = "solid red";
+            validacao_nome.innerHTML += "<span>Seu nome deve ter mais de 2 caracteres.</span>";
+            validado = false;
+        }
+
+        if (telefone.length != 11) {
+            ipt_telefone.style.border = "solid red";
+            validacao_telefone.innerHTML += "<span> Telefone deve ter 11 números.</span>";
+            validado = false;
+        }
+
+        if (email.indexOf("@") < 0 || email.indexOf(".") < 0 || email.length < 9) {
+            ipt_email.style.border = "solid red";
+            validacao_email.innerHTML += " <span>Seu email deve ter @ e um .</span>";
+            validado = false;
+        }
+
+        if (senha.length < 6) {
+            ipt_senha.style.border = "solid red";
+            validacao_senha.innerHTML += "<span> Sua senha deve ter mais de 5 caracteres.</span>";
+            validado = false;
+        }
+
+        if (confirmar_senha !== senha) {
+            ipt_confirmar_senha.style.border = "solid red";
+            validacao_confirmar_senha.innerHTML += "<span>Confirmação de senha deve ser igual a senha. </span>";
+            validado = false;
+        }
+
+        if (validado) {
+            cadastrar();
+        }
+    }
+
+    function cadastrar() {
+
+        var time_que_torce = select_time.value;
+
+        var nome = ipt_nome.value;
+        var telefone = ipt_telefone.value;
+        var email = ipt_email.value;
+        var senha = ipt_senha.value;
+        var confirmar_senha = ipt_confirmar_senha.value;
 
         if (
             time_que_torce == "" ||

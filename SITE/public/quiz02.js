@@ -45,7 +45,7 @@ function displayProximaPergunta() {
 function selectAnswer(event) {
     var answerClicked = event.target;
     
-    if (answerClicked.dataset.correct) {
+    if (answerClicked.dataset. correct) {
         answerClicked.classList.add("correct");
    
         totalCorrect++;
@@ -76,7 +76,7 @@ function finishGame() {
  var id = sessionStorage.ID_USUARIO;
     
       
-
+ 
          fetch("/quiz/finishGame", {
                 method: "POST",
                 headers: {
